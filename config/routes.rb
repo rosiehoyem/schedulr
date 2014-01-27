@@ -1,7 +1,12 @@
 Schedulr::Application.routes.draw do
-  resources :tasks
+  root "main/index"
 
-  resources :topics
+  scope "api" do
+    resources :topics do
+      resources :tasks
+    end
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

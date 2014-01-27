@@ -1,0 +1,7 @@
+<h1>Topics</h1>
+
+<ul>
+<% for topic in @topics.models: %>
+  <li><%= topic.get('name') %></li>
+<% end %>
+</ul>
